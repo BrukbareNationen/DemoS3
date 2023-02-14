@@ -17,4 +17,4 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
     - name: Copy to S3
-      run: aws s3 sync . s3://nationenmedia/github/demo
+      run: aws s3 sync . s3://nationenmedia/github/demo --exclude '.git*/*'
